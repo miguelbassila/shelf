@@ -18,6 +18,7 @@
 		FC3B52E01DE9397C006D49E2 /* ShelfCore.h in Headers */ = {isa = PBXBuildFile; fileRef = FC3B52D01DE9397C006D49E2 /* ShelfCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FC3B52E31DE9397C006D49E2 /* ShelfCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC3B52CE1DE9397C006D49E2 /* ShelfCore.framework */; };
 		FC3B52E41DE9397C006D49E2 /* ShelfCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FC3B52CE1DE9397C006D49E2 /* ShelfCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FC3B52EE1DE93A08006D49E2 /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC3B52ED1DE93A08006D49E2 /* ReSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		FC3B52D61DE9397C006D49E2 /* ShelfCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShelfCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC3B52DD1DE9397C006D49E2 /* ShelfCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelfCoreTests.swift; sourceTree = "<group>"; };
 		FC3B52DF1DE9397C006D49E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC3B52ED1DE93A08006D49E2 /* ReSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReSwift.framework; path = Carthage/Build/iOS/ReSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC3B52EE1DE93A08006D49E2 /* ReSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,6 +129,7 @@
 				FC3B52CF1DE9397C006D49E2 /* ShelfCore */,
 				FC3B52DC1DE9397C006D49E2 /* ShelfCoreTests */,
 				FC3B52A71DE938EF006D49E2 /* Products */,
+				FC3B52EC1DE93A08006D49E2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -178,6 +182,14 @@
 				FC3B52DF1DE9397C006D49E2 /* Info.plist */,
 			);
 			path = ShelfCoreTests;
+			sourceTree = "<group>";
+		};
+		FC3B52EC1DE93A08006D49E2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC3B52ED1DE93A08006D49E2 /* ReSwift.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -583,6 +595,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ShelfCore/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -605,6 +621,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ShelfCore/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
