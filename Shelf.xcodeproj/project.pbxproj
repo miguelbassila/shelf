@@ -13,6 +13,11 @@
 		FC3B52B11DE938EF006D49E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC3B52B01DE938EF006D49E2 /* Assets.xcassets */; };
 		FC3B52B41DE938EF006D49E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC3B52B21DE938EF006D49E2 /* LaunchScreen.storyboard */; };
 		FC3B52BF1DE938EF006D49E2 /* ShelfTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3B52BE1DE938EF006D49E2 /* ShelfTests.swift */; };
+		FC3B52D71DE9397C006D49E2 /* ShelfCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC3B52CE1DE9397C006D49E2 /* ShelfCore.framework */; };
+		FC3B52DE1DE9397C006D49E2 /* ShelfCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3B52DD1DE9397C006D49E2 /* ShelfCoreTests.swift */; };
+		FC3B52E01DE9397C006D49E2 /* ShelfCore.h in Headers */ = {isa = PBXBuildFile; fileRef = FC3B52D01DE9397C006D49E2 /* ShelfCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FC3B52E31DE9397C006D49E2 /* ShelfCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC3B52CE1DE9397C006D49E2 /* ShelfCore.framework */; };
+		FC3B52E41DE9397C006D49E2 /* ShelfCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FC3B52CE1DE9397C006D49E2 /* ShelfCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,7 +28,42 @@
 			remoteGlobalIDString = FC3B52A51DE938EF006D49E2;
 			remoteInfo = Shelf;
 		};
+		FC3B52D81DE9397C006D49E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC3B529E1DE938EF006D49E2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC3B52CD1DE9397C006D49E2;
+			remoteInfo = ShelfCore;
+		};
+		FC3B52DA1DE9397C006D49E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC3B529E1DE938EF006D49E2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC3B52A51DE938EF006D49E2;
+			remoteInfo = Shelf;
+		};
+		FC3B52E11DE9397C006D49E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC3B529E1DE938EF006D49E2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC3B52CD1DE9397C006D49E2;
+			remoteInfo = ShelfCore;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FC3B52E81DE9397C006D49E2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FC3B52E41DE9397C006D49E2 /* ShelfCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		FC3B52A61DE938EF006D49E2 /* Shelf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shelf.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,6 +76,12 @@
 		FC3B52BA1DE938EF006D49E2 /* ShelfTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShelfTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC3B52BE1DE938EF006D49E2 /* ShelfTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelfTests.swift; sourceTree = "<group>"; };
 		FC3B52C01DE938EF006D49E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC3B52CE1DE9397C006D49E2 /* ShelfCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ShelfCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC3B52D01DE9397C006D49E2 /* ShelfCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShelfCore.h; sourceTree = "<group>"; };
+		FC3B52D11DE9397C006D49E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC3B52D61DE9397C006D49E2 /* ShelfCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShelfCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC3B52DD1DE9397C006D49E2 /* ShelfCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelfCoreTests.swift; sourceTree = "<group>"; };
+		FC3B52DF1DE9397C006D49E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC3B52E31DE9397C006D49E2 /* ShelfCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +97,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC3B52CA1DE9397C006D49E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC3B52D31DE9397C006D49E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC3B52D71DE9397C006D49E2 /* ShelfCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +123,8 @@
 			children = (
 				FC3B52A81DE938EF006D49E2 /* Shelf */,
 				FC3B52BD1DE938EF006D49E2 /* ShelfTests */,
+				FC3B52CF1DE9397C006D49E2 /* ShelfCore */,
+				FC3B52DC1DE9397C006D49E2 /* ShelfCoreTests */,
 				FC3B52A71DE938EF006D49E2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,6 +134,8 @@
 			children = (
 				FC3B52A61DE938EF006D49E2 /* Shelf.app */,
 				FC3B52BA1DE938EF006D49E2 /* ShelfTests.xctest */,
+				FC3B52CE1DE9397C006D49E2 /* ShelfCore.framework */,
+				FC3B52D61DE9397C006D49E2 /* ShelfCoreTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -96,7 +162,36 @@
 			path = ShelfTests;
 			sourceTree = "<group>";
 		};
+		FC3B52CF1DE9397C006D49E2 /* ShelfCore */ = {
+			isa = PBXGroup;
+			children = (
+				FC3B52D01DE9397C006D49E2 /* ShelfCore.h */,
+				FC3B52D11DE9397C006D49E2 /* Info.plist */,
+			);
+			path = ShelfCore;
+			sourceTree = "<group>";
+		};
+		FC3B52DC1DE9397C006D49E2 /* ShelfCoreTests */ = {
+			isa = PBXGroup;
+			children = (
+				FC3B52DD1DE9397C006D49E2 /* ShelfCoreTests.swift */,
+				FC3B52DF1DE9397C006D49E2 /* Info.plist */,
+			);
+			path = ShelfCoreTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		FC3B52CB1DE9397C006D49E2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC3B52E01DE9397C006D49E2 /* ShelfCore.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		FC3B52A51DE938EF006D49E2 /* Shelf */ = {
@@ -106,10 +201,12 @@
 				FC3B52A21DE938EF006D49E2 /* Sources */,
 				FC3B52A31DE938EF006D49E2 /* Frameworks */,
 				FC3B52A41DE938EF006D49E2 /* Resources */,
+				FC3B52E81DE9397C006D49E2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				FC3B52E21DE9397C006D49E2 /* PBXTargetDependency */,
 			);
 			name = Shelf;
 			productName = Shelf;
@@ -134,6 +231,43 @@
 			productReference = FC3B52BA1DE938EF006D49E2 /* ShelfTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		FC3B52CD1DE9397C006D49E2 /* ShelfCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC3B52E51DE9397C006D49E2 /* Build configuration list for PBXNativeTarget "ShelfCore" */;
+			buildPhases = (
+				FC3B52C91DE9397C006D49E2 /* Sources */,
+				FC3B52CA1DE9397C006D49E2 /* Frameworks */,
+				FC3B52CB1DE9397C006D49E2 /* Headers */,
+				FC3B52CC1DE9397C006D49E2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShelfCore;
+			productName = ShelfCore;
+			productReference = FC3B52CE1DE9397C006D49E2 /* ShelfCore.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FC3B52D51DE9397C006D49E2 /* ShelfCoreTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC3B52E91DE9397C006D49E2 /* Build configuration list for PBXNativeTarget "ShelfCoreTests" */;
+			buildPhases = (
+				FC3B52D21DE9397C006D49E2 /* Sources */,
+				FC3B52D31DE9397C006D49E2 /* Frameworks */,
+				FC3B52D41DE9397C006D49E2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FC3B52D91DE9397C006D49E2 /* PBXTargetDependency */,
+				FC3B52DB1DE9397C006D49E2 /* PBXTargetDependency */,
+			);
+			name = ShelfCoreTests;
+			productName = ShelfCoreTests;
+			productReference = FC3B52D61DE9397C006D49E2 /* ShelfCoreTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -149,6 +283,15 @@
 						ProvisioningStyle = Automatic;
 					};
 					FC3B52B91DE938EF006D49E2 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FC3B52A51DE938EF006D49E2;
+					};
+					FC3B52CD1DE9397C006D49E2 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
+					FC3B52D51DE9397C006D49E2 = {
 						CreatedOnToolsVersion = 8.1;
 						ProvisioningStyle = Automatic;
 						TestTargetID = FC3B52A51DE938EF006D49E2;
@@ -170,6 +313,8 @@
 			targets = (
 				FC3B52A51DE938EF006D49E2 /* Shelf */,
 				FC3B52B91DE938EF006D49E2 /* ShelfTests */,
+				FC3B52CD1DE9397C006D49E2 /* ShelfCore */,
+				FC3B52D51DE9397C006D49E2 /* ShelfCoreTests */,
 			);
 		};
 /* End PBXProject section */
@@ -186,6 +331,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		FC3B52B81DE938EF006D49E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC3B52CC1DE9397C006D49E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC3B52D41DE9397C006D49E2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -212,6 +371,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FC3B52C91DE9397C006D49E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC3B52D21DE9397C006D49E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC3B52DE1DE9397C006D49E2 /* ShelfCoreTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -219,6 +393,21 @@
 			isa = PBXTargetDependency;
 			target = FC3B52A51DE938EF006D49E2 /* Shelf */;
 			targetProxy = FC3B52BB1DE938EF006D49E2 /* PBXContainerItemProxy */;
+		};
+		FC3B52D91DE9397C006D49E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC3B52CD1DE9397C006D49E2 /* ShelfCore */;
+			targetProxy = FC3B52D81DE9397C006D49E2 /* PBXContainerItemProxy */;
+		};
+		FC3B52DB1DE9397C006D49E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC3B52A51DE938EF006D49E2 /* Shelf */;
+			targetProxy = FC3B52DA1DE9397C006D49E2 /* PBXContainerItemProxy */;
+		};
+		FC3B52E21DE9397C006D49E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC3B52CD1DE9397C006D49E2 /* ShelfCore */;
+			targetProxy = FC3B52E11DE9397C006D49E2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -385,6 +574,76 @@
 			};
 			name = Release;
 		};
+		FC3B52E61DE9397C006D49E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ShelfCore/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.miguelbassila.ShelfCore;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FC3B52E71DE9397C006D49E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ShelfCore/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.miguelbassila.ShelfCore;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FC3B52EA1DE9397C006D49E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = ShelfCoreTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.miguelbassila.ShelfCoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Shelf.app/Shelf";
+			};
+			name = Debug;
+		};
+		FC3B52EB1DE9397C006D49E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = ShelfCoreTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.miguelbassila.ShelfCoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Shelf.app/Shelf";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -410,6 +669,22 @@
 			buildConfigurations = (
 				FC3B52C71DE938EF006D49E2 /* Debug */,
 				FC3B52C81DE938EF006D49E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FC3B52E51DE9397C006D49E2 /* Build configuration list for PBXNativeTarget "ShelfCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC3B52E61DE9397C006D49E2 /* Debug */,
+				FC3B52E71DE9397C006D49E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FC3B52E91DE9397C006D49E2 /* Build configuration list for PBXNativeTarget "ShelfCoreTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC3B52EA1DE9397C006D49E2 /* Debug */,
+				FC3B52EB1DE9397C006D49E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
