@@ -7,19 +7,37 @@
 //
 
 import UIKit
+import ReSwift
+import ShelfCore
 
 class ViewController: UIViewController {
 
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+  @IBOutlet weak var pointsLabel: UILabel!
+
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    mainStore.subscribe(self)
   }
 
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
+  override func viewWillDisappear(_ animated: Bool) {
+    super.viewWillDisappear(animated)
+    mainStore.unsubscribe(self)
   }
 
+  @IBAction func increaseAction(_ sender: Any) {
+    mainStore.dispatch(CounterAction.increase)
+  }
 
+  @IBAction func decreaseAction(_ sender: Any) {
+    mainStore.dispatch(CounterAction.decrease)
+  }
 }
 
+extension ViewController: StoreSubscriber {
+
+  typealias StoreSubscriberStateType = AppState
+
+  func newState(state: AppState) {
+    pointsLabel.text = "\(state.counter)"
+  }
+}

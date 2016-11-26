@@ -19,6 +19,11 @@
 		FC3B52E31DE9397C006D49E2 /* ShelfCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC3B52CE1DE9397C006D49E2 /* ShelfCore.framework */; };
 		FC3B52E41DE9397C006D49E2 /* ShelfCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FC3B52CE1DE9397C006D49E2 /* ShelfCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FC3B52EE1DE93A08006D49E2 /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC3B52ED1DE93A08006D49E2 /* ReSwift.framework */; };
+		FC3B52F01DE93A5B006D49E2 /* ApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3B52EF1DE93A5B006D49E2 /* ApplicationState.swift */; };
+		FC3B52F21DE93AAE006D49E2 /* CounterActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3B52F11DE93AAE006D49E2 /* CounterActions.swift */; };
+		FC3B52F41DE93AD7006D49E2 /* CounterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3B52F31DE93AD7006D49E2 /* CounterReducer.swift */; };
+		FC3B52F61DE93D5F006D49E2 /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC3B52ED1DE93A08006D49E2 /* ReSwift.framework */; };
+		FC3B52F71DE93D5F006D49E2 /* ReSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FC3B52ED1DE93A08006D49E2 /* ReSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +65,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				FC3B52E41DE9397C006D49E2 /* ShelfCore.framework in Embed Frameworks */,
+				FC3B52F71DE93D5F006D49E2 /* ReSwift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -84,6 +90,9 @@
 		FC3B52DD1DE9397C006D49E2 /* ShelfCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelfCoreTests.swift; sourceTree = "<group>"; };
 		FC3B52DF1DE9397C006D49E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC3B52ED1DE93A08006D49E2 /* ReSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReSwift.framework; path = Carthage/Build/iOS/ReSwift.framework; sourceTree = "<group>"; };
+		FC3B52EF1DE93A5B006D49E2 /* ApplicationState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationState.swift; sourceTree = "<group>"; };
+		FC3B52F11DE93AAE006D49E2 /* CounterActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterActions.swift; sourceTree = "<group>"; };
+		FC3B52F31DE93AD7006D49E2 /* CounterReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterReducer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +101,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC3B52E31DE9397C006D49E2 /* ShelfCore.framework in Frameworks */,
+				FC3B52F61DE93D5F006D49E2 /* ReSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +181,9 @@
 			children = (
 				FC3B52D01DE9397C006D49E2 /* ShelfCore.h */,
 				FC3B52D11DE9397C006D49E2 /* Info.plist */,
+				FC3B52EF1DE93A5B006D49E2 /* ApplicationState.swift */,
+				FC3B52F11DE93AAE006D49E2 /* CounterActions.swift */,
+				FC3B52F31DE93AD7006D49E2 /* CounterReducer.swift */,
 			);
 			path = ShelfCore;
 			sourceTree = "<group>";
@@ -301,6 +314,7 @@
 					};
 					FC3B52CD1DE9397C006D49E2 = {
 						CreatedOnToolsVersion = 8.1;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 					FC3B52D51DE9397C006D49E2 = {
@@ -387,6 +401,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC3B52F21DE93AAE006D49E2 /* CounterActions.swift in Sources */,
+				FC3B52F41DE93AD7006D49E2 /* CounterReducer.swift in Sources */,
+				FC3B52F01DE93A5B006D49E2 /* ApplicationState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,7 +554,12 @@
 		FC3B52C41DE938EF006D49E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Shelf/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.miguelbassila.Shelf;
@@ -549,7 +571,12 @@
 		FC3B52C51DE938EF006D49E2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Shelf/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.miguelbassila.Shelf;
@@ -589,6 +616,7 @@
 		FC3B52E61DE9397C006D49E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -605,6 +633,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.miguelbassila.ShelfCore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -615,6 +644,7 @@
 		FC3B52E71DE9397C006D49E2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
