@@ -36,7 +36,7 @@ class BookShelfViewController: UIViewController {
 
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    mainStore.subscribe(self)
+    mainStore.subscribe(self) { $0.bookShelfState }
   }
 
   override func viewWillDisappear(_ animated: Bool) {
@@ -93,9 +93,9 @@ extension BookShelfViewController: UITableViewDelegate {
 }
 
 extension BookShelfViewController: StoreSubscriber {
-  typealias StoreSubscriberStateType = AppState
+  typealias StoreSubscriberStateType = BookShelfState
 
-  func newState(state: AppState) {
+  func newState(state: BookShelfState) {
     tableView.reloadData()
   }
 }

@@ -19,7 +19,6 @@ public struct AppReducer: Reducer {
   }
 
   func bookShelfReducer(state: BookShelfState?, action: Action) -> BookShelfState {
-    let bookShelfReducer = BookShelfReducer()
-    return bookShelfReducer.handleAction(action: action, state: state)
+    return BookShelfReducer().handleAction(action: action, state: state)
   }
 }
