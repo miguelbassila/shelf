@@ -8,13 +8,18 @@
 
 import Foundation
 
-struct Book {
-  let name: String
-  let author: String
+public struct Book {
+  public let name: String
+  public let author: String
+
+  public init(name: String, author: String) {
+    self.name = name
+    self.author = author
+  }
 }
 
 extension Book: Equatable {
-  static func == (lhs: Book, rhs: Book) -> Bool {
+  public static func == (lhs: Book, rhs: Book) -> Bool {
     return lhs.name == rhs.name && lhs.author == rhs.author
   }
 }

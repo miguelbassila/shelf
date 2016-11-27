@@ -7,27 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FC0B02DE1DEB475000F68B69 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0B02DD1DEB475000F68B69 /* Book.swift */; };
-		FC0B02E01DEB482900F68B69 /* ShelfState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0B02DF1DEB482900F68B69 /* ShelfState.swift */; };
-		FC0B02E41DEB4DDB00F68B69 /* ShelfAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0B02E31DEB4DDB00F68B69 /* ShelfAction.swift */; };
-		FC0B02E61DEB4E1300F68B69 /* ShelfReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0B02E51DEB4E1300F68B69 /* ShelfReducer.swift */; };
+		FC0B02E91DEB57DA00F68B69 /* BookShelfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0B02E81DEB57DA00F68B69 /* BookShelfViewController.swift */; };
+		FC0B02F51DEB64A200F68B69 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0B02F41DEB64A200F68B69 /* AppState.swift */; };
+		FC0B02F71DEB64DE00F68B69 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0B02F61DEB64DE00F68B69 /* AppReducer.swift */; };
 		FC3B52AA1DE938EF006D49E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3B52A91DE938EF006D49E2 /* AppDelegate.swift */; };
-		FC3B52AC1DE938EF006D49E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3B52AB1DE938EF006D49E2 /* ViewController.swift */; };
-		FC3B52AF1DE938EF006D49E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC3B52AD1DE938EF006D49E2 /* Main.storyboard */; };
 		FC3B52B11DE938EF006D49E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC3B52B01DE938EF006D49E2 /* Assets.xcassets */; };
 		FC3B52B41DE938EF006D49E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC3B52B21DE938EF006D49E2 /* LaunchScreen.storyboard */; };
 		FC3B52BF1DE938EF006D49E2 /* ShelfTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3B52BE1DE938EF006D49E2 /* ShelfTests.swift */; };
 		FC3B52D71DE9397C006D49E2 /* ShelfCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC3B52CE1DE9397C006D49E2 /* ShelfCore.framework */; };
 		FC3B52DE1DE9397C006D49E2 /* ShelfCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3B52DD1DE9397C006D49E2 /* ShelfCoreTests.swift */; };
 		FC3B52E01DE9397C006D49E2 /* ShelfCore.h in Headers */ = {isa = PBXBuildFile; fileRef = FC3B52D01DE9397C006D49E2 /* ShelfCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FC3B52E31DE9397C006D49E2 /* ShelfCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC3B52CE1DE9397C006D49E2 /* ShelfCore.framework */; };
-		FC3B52E41DE9397C006D49E2 /* ShelfCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FC3B52CE1DE9397C006D49E2 /* ShelfCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FC3B52EE1DE93A08006D49E2 /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC3B52ED1DE93A08006D49E2 /* ReSwift.framework */; };
-		FC3B52F01DE93A5B006D49E2 /* ApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3B52EF1DE93A5B006D49E2 /* ApplicationState.swift */; };
-		FC3B52F21DE93AAE006D49E2 /* CounterActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3B52F11DE93AAE006D49E2 /* CounterActions.swift */; };
-		FC3B52F41DE93AD7006D49E2 /* CounterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3B52F31DE93AD7006D49E2 /* CounterReducer.swift */; };
 		FC3B52F61DE93D5F006D49E2 /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC3B52ED1DE93A08006D49E2 /* ReSwift.framework */; };
 		FC3B52F71DE93D5F006D49E2 /* ReSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FC3B52ED1DE93A08006D49E2 /* ReSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FCE94E3A1DEB788500A95433 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE94E361DEB788500A95433 /* Book.swift */; };
+		FCE94E3B1DEB788500A95433 /* BookShelfAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE94E371DEB788500A95433 /* BookShelfAction.swift */; };
+		FCE94E3C1DEB788500A95433 /* BookShelfReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE94E381DEB788500A95433 /* BookShelfReducer.swift */; };
+		FCE94E3D1DEB788500A95433 /* BookShelfState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE94E391DEB788500A95433 /* BookShelfState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,13 +48,6 @@
 			remoteGlobalIDString = FC3B52A51DE938EF006D49E2;
 			remoteInfo = Shelf;
 		};
-		FC3B52E11DE9397C006D49E2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FC3B529E1DE938EF006D49E2 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FC3B52CD1DE9397C006D49E2;
-			remoteInfo = ShelfCore;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -68,7 +57,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				FC3B52E41DE9397C006D49E2 /* ShelfCore.framework in Embed Frameworks */,
 				FC3B52F71DE93D5F006D49E2 /* ReSwift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -77,14 +65,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		FC0B02DD1DEB475000F68B69 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
-		FC0B02DF1DEB482900F68B69 /* ShelfState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShelfState.swift; sourceTree = "<group>"; };
-		FC0B02E31DEB4DDB00F68B69 /* ShelfAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShelfAction.swift; sourceTree = "<group>"; };
-		FC0B02E51DEB4E1300F68B69 /* ShelfReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShelfReducer.swift; sourceTree = "<group>"; };
+		FC0B02E81DEB57DA00F68B69 /* BookShelfViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookShelfViewController.swift; sourceTree = "<group>"; };
+		FC0B02F41DEB64A200F68B69 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		FC0B02F61DEB64DE00F68B69 /* AppReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
 		FC3B52A61DE938EF006D49E2 /* Shelf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shelf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC3B52A91DE938EF006D49E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FC3B52AB1DE938EF006D49E2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FC3B52AE1DE938EF006D49E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC3B52B01DE938EF006D49E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC3B52B31DE938EF006D49E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC3B52B51DE938EF006D49E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -98,9 +83,10 @@
 		FC3B52DD1DE9397C006D49E2 /* ShelfCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelfCoreTests.swift; sourceTree = "<group>"; };
 		FC3B52DF1DE9397C006D49E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC3B52ED1DE93A08006D49E2 /* ReSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReSwift.framework; path = Carthage/Build/iOS/ReSwift.framework; sourceTree = "<group>"; };
-		FC3B52EF1DE93A5B006D49E2 /* ApplicationState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationState.swift; sourceTree = "<group>"; };
-		FC3B52F11DE93AAE006D49E2 /* CounterActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterActions.swift; sourceTree = "<group>"; };
-		FC3B52F31DE93AD7006D49E2 /* CounterReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterReducer.swift; sourceTree = "<group>"; };
+		FCE94E361DEB788500A95433 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		FCE94E371DEB788500A95433 /* BookShelfAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookShelfAction.swift; sourceTree = "<group>"; };
+		FCE94E381DEB788500A95433 /* BookShelfReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookShelfReducer.swift; sourceTree = "<group>"; };
+		FCE94E391DEB788500A95433 /* BookShelfState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookShelfState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +94,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC3B52E31DE9397C006D49E2 /* ShelfCore.framework in Frameworks */,
 				FC3B52F61DE93D5F006D49E2 /* ReSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,15 +124,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FC0B02DC1DEB474800F68B69 /* Shelf */ = {
+		FC0B02E71DEB57C500F68B69 /* BookShelf */ = {
 			isa = PBXGroup;
 			children = (
-				FC0B02DD1DEB475000F68B69 /* Book.swift */,
-				FC0B02DF1DEB482900F68B69 /* ShelfState.swift */,
-				FC0B02E31DEB4DDB00F68B69 /* ShelfAction.swift */,
-				FC0B02E51DEB4E1300F68B69 /* ShelfReducer.swift */,
+				FC0B02E81DEB57DA00F68B69 /* BookShelfViewController.swift */,
 			);
-			path = Shelf;
+			path = BookShelf;
+			sourceTree = "<group>";
+		};
+		FC0B02F31DEB649A00F68B69 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FC0B02F41DEB64A200F68B69 /* AppState.swift */,
+				FC0B02F61DEB64DE00F68B69 /* AppReducer.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 		FC3B529D1DE938EF006D49E2 = {
@@ -176,9 +167,8 @@
 		FC3B52A81DE938EF006D49E2 /* Shelf */ = {
 			isa = PBXGroup;
 			children = (
+				FC0B02E71DEB57C500F68B69 /* BookShelf */,
 				FC3B52A91DE938EF006D49E2 /* AppDelegate.swift */,
-				FC3B52AB1DE938EF006D49E2 /* ViewController.swift */,
-				FC3B52AD1DE938EF006D49E2 /* Main.storyboard */,
 				FC3B52B01DE938EF006D49E2 /* Assets.xcassets */,
 				FC3B52B21DE938EF006D49E2 /* LaunchScreen.storyboard */,
 				FC3B52B51DE938EF006D49E2 /* Info.plist */,
@@ -198,12 +188,10 @@
 		FC3B52CF1DE9397C006D49E2 /* ShelfCore */ = {
 			isa = PBXGroup;
 			children = (
-				FC0B02DC1DEB474800F68B69 /* Shelf */,
+				FC0B02F31DEB649A00F68B69 /* App */,
+				FCE94E351DEB788500A95433 /* BookShelf */,
 				FC3B52D01DE9397C006D49E2 /* ShelfCore.h */,
 				FC3B52D11DE9397C006D49E2 /* Info.plist */,
-				FC3B52EF1DE93A5B006D49E2 /* ApplicationState.swift */,
-				FC3B52F11DE93AAE006D49E2 /* CounterActions.swift */,
-				FC3B52F31DE93AD7006D49E2 /* CounterReducer.swift */,
 			);
 			path = ShelfCore;
 			sourceTree = "<group>";
@@ -223,6 +211,17 @@
 				FC3B52ED1DE93A08006D49E2 /* ReSwift.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FCE94E351DEB788500A95433 /* BookShelf */ = {
+			isa = PBXGroup;
+			children = (
+				FCE94E361DEB788500A95433 /* Book.swift */,
+				FCE94E371DEB788500A95433 /* BookShelfAction.swift */,
+				FCE94E381DEB788500A95433 /* BookShelfReducer.swift */,
+				FCE94E391DEB788500A95433 /* BookShelfState.swift */,
+			);
+			path = BookShelf;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,7 +250,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				FC3B52E21DE9397C006D49E2 /* PBXTargetDependency */,
 			);
 			name = Shelf;
 			productName = Shelf;
@@ -372,7 +370,6 @@
 			files = (
 				FC3B52B41DE938EF006D49E2 /* LaunchScreen.storyboard in Resources */,
 				FC3B52B11DE938EF006D49E2 /* Assets.xcassets in Resources */,
-				FC3B52AF1DE938EF006D49E2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,7 +401,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC3B52AC1DE938EF006D49E2 /* ViewController.swift in Sources */,
+				FC0B02E91DEB57DA00F68B69 /* BookShelfViewController.swift in Sources */,
 				FC3B52AA1DE938EF006D49E2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,13 +418,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC0B02E41DEB4DDB00F68B69 /* ShelfAction.swift in Sources */,
-				FC3B52F21DE93AAE006D49E2 /* CounterActions.swift in Sources */,
-				FC3B52F41DE93AD7006D49E2 /* CounterReducer.swift in Sources */,
-				FC0B02DE1DEB475000F68B69 /* Book.swift in Sources */,
-				FC0B02E61DEB4E1300F68B69 /* ShelfReducer.swift in Sources */,
-				FC0B02E01DEB482900F68B69 /* ShelfState.swift in Sources */,
-				FC3B52F01DE93A5B006D49E2 /* ApplicationState.swift in Sources */,
+				FCE94E3C1DEB788500A95433 /* BookShelfReducer.swift in Sources */,
+				FC0B02F71DEB64DE00F68B69 /* AppReducer.swift in Sources */,
+				FC0B02F51DEB64A200F68B69 /* AppState.swift in Sources */,
+				FCE94E3D1DEB788500A95433 /* BookShelfState.swift in Sources */,
+				FCE94E3A1DEB788500A95433 /* Book.swift in Sources */,
+				FCE94E3B1DEB788500A95433 /* BookShelfAction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,22 +453,9 @@
 			target = FC3B52A51DE938EF006D49E2 /* Shelf */;
 			targetProxy = FC3B52DA1DE9397C006D49E2 /* PBXContainerItemProxy */;
 		};
-		FC3B52E21DE9397C006D49E2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FC3B52CD1DE9397C006D49E2 /* ShelfCore */;
-			targetProxy = FC3B52E11DE9397C006D49E2 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		FC3B52AD1DE938EF006D49E2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FC3B52AE1DE938EF006D49E2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FC3B52B21DE938EF006D49E2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -578,7 +561,6 @@
 		FC3B52C41DE938EF006D49E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -595,7 +577,6 @@
 		FC3B52C51DE938EF006D49E2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

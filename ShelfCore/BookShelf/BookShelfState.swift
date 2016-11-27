@@ -9,12 +9,12 @@
 import Foundation
 import ReSwift
 
-struct ShelfState: StateType {
-  let books: [Book]
+public struct BookShelfState: StateType {
+  public let books: [Book]
 }
 
-extension ShelfState {
-  init() {
+extension BookShelfState {
+  public init() {
     books = [Book]()
   }
 }

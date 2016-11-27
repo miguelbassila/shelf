@@ -9,24 +9,24 @@
 import Foundation
 import ReSwift
 
-struct ShelfReducer: Reducer {
-  typealias ReducerStateType = ShelfState
+public struct BookShelfReducer: Reducer {
+  public typealias ReducerStateType = BookShelfState
 
-  func handleAction(action: Action, state: ShelfState?) -> ShelfState {
+  public func handleAction(action: Action, state: BookShelfState?) -> BookShelfState {
 
-    guard let state = state else { return ShelfState() }
-    guard let action = action as? ShelfAction else { return state }
+    guard let state = state else { return BookShelfState() }
+    guard let action = action as? BookShelfAction else { return state }
 
     switch action {
     case .add(let book):
       var books = state.books
       books.append(book)
-      return ShelfState(books: books)
+      return BookShelfState(books: books)
     case .remove(let book):
       var books = state.books
       if let index = books.index(of: book) {
         books.remove(at: index)
-        return ShelfState(books: books)
+        return BookShelfState(books: books)
       }
       return state
     }
