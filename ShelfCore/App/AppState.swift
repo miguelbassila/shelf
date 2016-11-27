@@ -10,11 +10,13 @@ import Foundation
 import ReSwift
 
 public struct AppState: StateType {
-  public let bookShelfState: BookShelfState
+  public let bookListState: BookListState
+  public let bookDetailState: BookDetailState
 }
 
 extension AppState {
   public init() {
-    self.bookShelfState = BookShelfState()
+    self.bookListState = BookListState()
+    self.bookDetailState = BookDetailState()
   }
 }

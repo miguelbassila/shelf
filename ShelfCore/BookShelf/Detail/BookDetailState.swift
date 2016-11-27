@@ -1,5 +1,5 @@
 //
-//  ShelfState.swift
+//  BookDetailsState.swift
 //  Shelf
 //
 //  Created by Miguel Bassila on 27/11/16.
@@ -9,12 +9,12 @@
 import Foundation
 import ReSwift
 
-public struct BookShelfState: StateType {
-  public let books: [Book]
+public struct BookDetailState: StateType {
+  public let current: Book
 }
 
-extension BookShelfState {
+extension BookDetailState {
   public init() {
-    books = [Book]()
+    current = Book(name: "Xablau", author: "Xableu")
   }
 }

@@ -15,10 +15,15 @@ public struct AppReducer: Reducer {
   public init() {}
 
   public func handleAction(action: Action, state: AppState?) -> AppState {
-    return AppState(bookShelfState: bookShelfReducer(state: state?.bookShelfState, action: action))
+    return AppState(bookListState: bookShelfReducer(state: state?.bookListState, action: action),
+                    bookDetailState: bookDetailsReducer(state: state?.bookDetailState, action: action))
   }
 
-  func bookShelfReducer(state: BookShelfState?, action: Action) -> BookShelfState {
-    return BookShelfReducer().handleAction(action: action, state: state)
+  func bookShelfReducer(state: BookListState?, action: Action) -> BookListState {
+    return BookListReducer().handleAction(action: action, state: state)
+  }
+
+  func bookDetailsReducer(state: BookDetailState?, action: Action) -> BookDetailState {
+    return BookDetailReducer().handleAction(action: action, state: state)
   }
 }

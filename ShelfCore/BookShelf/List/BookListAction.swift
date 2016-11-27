@@ -9,7 +9,7 @@
 import Foundation
 import ReSwift
 
-public enum BookShelfAction: Action {
+public enum BookListAction: Action {
   case add(Book)
   case remove(Book)
 }

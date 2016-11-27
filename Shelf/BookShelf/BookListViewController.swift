@@ -10,7 +10,7 @@ import UIKit
 import ReSwift
 import ShelfCore
 
-class BookShelfViewController: UIViewController {
+class BookListViewController: UIViewController {
 
   lazy var tableView: UITableView = {
     let tableView = UITableView()
@@ -19,6 +19,15 @@ class BookShelfViewController: UIViewController {
     tableView.delegate = self
     return tableView
   }()
+
+  var books: [Book] = mainStore.state.bookListState.books {
+    willSet {
+      if newValue != books {
+        self.books = newValue
+        tableView.reloadData()
+      }
+    }
+  }
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -30,13 +39,14 @@ class BookShelfViewController: UIViewController {
     tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
     tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+    tableView.backgroundColor = UIColor.white
 
     navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addBook))
   }
 
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    mainStore.subscribe(self) { $0.bookShelfState }
+    mainStore.subscribe(self) { $0.bookListState }
   }
 
   override func viewWillDisappear(_ animated: Bool) {
@@ -54,7 +64,7 @@ class BookShelfViewController: UIViewController {
           return
       }
 
-      mainStore.dispatch(BookShelfAction.add(Book(name: nameText, author: authorText)))
+      mainStore.dispatch(BookListAction.add(Book(name: nameText, author: authorText)))
     }
     alertController.addAction(saveAction)
 
@@ -73,29 +83,31 @@ class BookShelfViewController: UIViewController {
   }
 }
 
-extension BookShelfViewController: UITableViewDataSource {
+extension BookListViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return mainStore.state.bookShelfState.books.count
+    return mainStore.state.bookListState.books.count
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-    cell.textLabel?.text = mainStore.state.bookShelfState.books[indexPath.row].name
+    cell.textLabel?.text = mainStore.state.bookListState.books[indexPath.row].name
     return cell
   }
 }
 
-extension BookShelfViewController: UITableViewDelegate {
+extension BookListViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    let book = mainStore.state.bookShelfState.books[indexPath.row]
-    mainStore.dispatch(BookShelfAction.remove(book))
+    let book = mainStore.state.bookListState.books[indexPath.row]
+    mainStore.dispatch(BookDetailAction.set(book))
+
+    navigationController?.pushViewController(BookDetailsViewController(), animated: true)
   }
 }
 
-extension BookShelfViewController: StoreSubscriber {
-  typealias StoreSubscriberStateType = BookShelfState
+extension BookListViewController: StoreSubscriber {
+  typealias StoreSubscriberStateType = BookListState
 
-  func newState(state: BookShelfState) {
-    tableView.reloadData()
+  func newState(state: BookListState) {
+    self.books = state.books
   }
 }
