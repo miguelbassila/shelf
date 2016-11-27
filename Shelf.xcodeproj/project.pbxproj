@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC0B02DE1DEB475000F68B69 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0B02DD1DEB475000F68B69 /* Book.swift */; };
+		FC0B02E01DEB482900F68B69 /* ShelfState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0B02DF1DEB482900F68B69 /* ShelfState.swift */; };
+		FC0B02E41DEB4DDB00F68B69 /* ShelfAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0B02E31DEB4DDB00F68B69 /* ShelfAction.swift */; };
+		FC0B02E61DEB4E1300F68B69 /* ShelfReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0B02E51DEB4E1300F68B69 /* ShelfReducer.swift */; };
 		FC3B52AA1DE938EF006D49E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3B52A91DE938EF006D49E2 /* AppDelegate.swift */; };
 		FC3B52AC1DE938EF006D49E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3B52AB1DE938EF006D49E2 /* ViewController.swift */; };
 		FC3B52AF1DE938EF006D49E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC3B52AD1DE938EF006D49E2 /* Main.storyboard */; };
@@ -73,6 +77,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FC0B02DD1DEB475000F68B69 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		FC0B02DF1DEB482900F68B69 /* ShelfState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShelfState.swift; sourceTree = "<group>"; };
+		FC0B02E31DEB4DDB00F68B69 /* ShelfAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShelfAction.swift; sourceTree = "<group>"; };
+		FC0B02E51DEB4E1300F68B69 /* ShelfReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShelfReducer.swift; sourceTree = "<group>"; };
 		FC3B52A61DE938EF006D49E2 /* Shelf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shelf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC3B52A91DE938EF006D49E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC3B52AB1DE938EF006D49E2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -131,6 +139,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC0B02DC1DEB474800F68B69 /* Shelf */ = {
+			isa = PBXGroup;
+			children = (
+				FC0B02DD1DEB475000F68B69 /* Book.swift */,
+				FC0B02DF1DEB482900F68B69 /* ShelfState.swift */,
+				FC0B02E31DEB4DDB00F68B69 /* ShelfAction.swift */,
+				FC0B02E51DEB4E1300F68B69 /* ShelfReducer.swift */,
+			);
+			path = Shelf;
+			sourceTree = "<group>";
+		};
 		FC3B529D1DE938EF006D49E2 = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +198,7 @@
 		FC3B52CF1DE9397C006D49E2 /* ShelfCore */ = {
 			isa = PBXGroup;
 			children = (
+				FC0B02DC1DEB474800F68B69 /* Shelf */,
 				FC3B52D01DE9397C006D49E2 /* ShelfCore.h */,
 				FC3B52D11DE9397C006D49E2 /* Info.plist */,
 				FC3B52EF1DE93A5B006D49E2 /* ApplicationState.swift */,
@@ -401,8 +421,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC0B02E41DEB4DDB00F68B69 /* ShelfAction.swift in Sources */,
 				FC3B52F21DE93AAE006D49E2 /* CounterActions.swift in Sources */,
 				FC3B52F41DE93AD7006D49E2 /* CounterReducer.swift in Sources */,
+				FC0B02DE1DEB475000F68B69 /* Book.swift in Sources */,
+				FC0B02E61DEB4E1300F68B69 /* ShelfReducer.swift in Sources */,
+				FC0B02E01DEB482900F68B69 /* ShelfState.swift in Sources */,
 				FC3B52F01DE93A5B006D49E2 /* ApplicationState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -713,6 +737,7 @@
 				FC3B52C51DE938EF006D49E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FC3B52C61DE938EF006D49E2 /* Build configuration list for PBXNativeTarget "ShelfTests" */ = {
 			isa = XCConfigurationList;
@@ -721,6 +746,7 @@
 				FC3B52C81DE938EF006D49E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FC3B52E51DE9397C006D49E2 /* Build configuration list for PBXNativeTarget "ShelfCore" */ = {
 			isa = XCConfigurationList;
@@ -729,6 +755,7 @@
 				FC3B52E71DE9397C006D49E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FC3B52E91DE9397C006D49E2 /* Build configuration list for PBXNativeTarget "ShelfCoreTests" */ = {
 			isa = XCConfigurationList;
@@ -737,6 +764,7 @@
 				FC3B52EB1DE9397C006D49E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
