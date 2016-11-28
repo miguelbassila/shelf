@@ -13,9 +13,14 @@ import ShelfCore
 class BookDetailsViewController: UIViewController {
 
   var book = mainStore.state.bookDetailState.current {
-    didSet (xablau) {
-      print(xablau)
+    didSet {
+      print(book)
     }
+  }
+
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    view.backgroundColor = UIColor.white
   }
 
   override func viewWillAppear(_ animated: Bool) {

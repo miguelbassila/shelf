@@ -20,12 +20,9 @@ class BookListViewController: UIViewController {
     return tableView
   }()
 
-  var books: [Book] = mainStore.state.bookListState.books {
-    willSet {
-      if newValue != books {
-        self.books = newValue
-        tableView.reloadData()
-      }
+  var books: [Book]? {
+    didSet {
+      tableView.reloadData()
     }
   }
 
@@ -85,21 +82,20 @@ class BookListViewController: UIViewController {
 
 extension BookListViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return mainStore.state.bookListState.books.count
+    return books?.count ?? 0
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-    cell.textLabel?.text = mainStore.state.bookListState.books[indexPath.row].name
+    cell.textLabel?.text = books?[indexPath.row].name
     return cell
   }
 }
 
 extension BookListViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    let book = mainStore.state.bookListState.books[indexPath.row]
+    guard let book = books?[indexPath.row] else { return }
     mainStore.dispatch(BookDetailAction.set(book))
-
     navigationController?.pushViewController(BookDetailsViewController(), animated: true)
   }
 }
