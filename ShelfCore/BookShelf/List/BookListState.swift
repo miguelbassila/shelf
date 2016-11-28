@@ -10,6 +10,7 @@ import Foundation
 import ReSwift
 
 public struct BookListState: StateType {
+  public let title = "All Books"
   public let books: [Book]
 }
 

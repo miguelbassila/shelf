@@ -12,12 +12,6 @@ import ShelfCore
 
 class BookDetailsViewController: UIViewController {
 
-  var book: Book? {
-    didSet {
-      print(book!)
-    }
-  }
-
   override func viewDidLoad() {
     super.viewDidLoad()
     view.backgroundColor = UIColor.white
@@ -38,6 +32,6 @@ extension BookDetailsViewController: StoreSubscriber {
   typealias StoreSubscriberStateType = BookDetailState
 
   func newState(state: BookDetailState) {
-    self.book = state.current
+    navigationItem.title = state.current.name
   }
 }

@@ -45,9 +45,8 @@ class BookListViewController: UIViewController {
     mainStore.unsubscribe(self)
   }
 
-  func addBook() {
+  func createAddBookAlertController() -> UIAlertController {
     let alertController = UIAlertController(title: "New Book", message: nil, preferredStyle: .alert)
-
     let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
     let saveAction = UIAlertAction(title: "Confirm", style: .default) { action in
       guard
@@ -70,7 +69,12 @@ class BookListViewController: UIViewController {
       $0.placeholder = "Author"
     }
 
-    self.present(alertController, animated: true, completion: nil)
+    return alertController
+  }
+
+  func addBook() {
+    let alert = createAddBookAlertController()
+    self.present(alert, animated: true, completion: nil)
   }
 }
 
@@ -98,6 +102,7 @@ extension BookListViewController: StoreSubscriber {
   typealias StoreSubscriberStateType = BookListState
 
   func newState(state: BookListState) {
+    navigationItem.title = state.title
     self.books = state.books
   }
 }
