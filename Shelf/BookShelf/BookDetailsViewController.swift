@@ -12,9 +12,9 @@ import ShelfCore
 
 class BookDetailsViewController: UIViewController {
 
-  var book = mainStore.state.bookDetailState.current {
+  var book: Book? {
     didSet {
-      print(book)
+      print(book!)
     }
   }
 

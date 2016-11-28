@@ -28,6 +28,8 @@
 		FC8A78E11DEBA638007C6880 /* BookListAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8A78DA1DEBA638007C6880 /* BookListAction.swift */; };
 		FC8A78E21DEBA638007C6880 /* BookListReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8A78DB1DEBA638007C6880 /* BookListReducer.swift */; };
 		FC8A78E31DEBA638007C6880 /* BookListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8A78DC1DEBA638007C6880 /* BookListState.swift */; };
+		FC8A78E51DEBB4FC007C6880 /* BookListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8A78E41DEBB4FC007C6880 /* BookListView.swift */; };
+		FC8A78E71DEBBFDF007C6880 /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8A78E61DEBBFDF007C6880 /* BookTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +97,8 @@
 		FC8A78DA1DEBA638007C6880 /* BookListAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookListAction.swift; sourceTree = "<group>"; };
 		FC8A78DB1DEBA638007C6880 /* BookListReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookListReducer.swift; sourceTree = "<group>"; };
 		FC8A78DC1DEBA638007C6880 /* BookListState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookListState.swift; sourceTree = "<group>"; };
+		FC8A78E41DEBB4FC007C6880 /* BookListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookListView.swift; sourceTree = "<group>"; };
+		FC8A78E61DEBBFDF007C6880 /* BookTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,8 +139,10 @@
 		FC0B02E71DEB57C500F68B69 /* BookShelf */ = {
 			isa = PBXGroup;
 			children = (
-				FC0B02E81DEB57DA00F68B69 /* BookListViewController.swift */,
 				FC8A78D11DEB98F2007C6880 /* BookDetailsViewController.swift */,
+				FC8A78E41DEBB4FC007C6880 /* BookListView.swift */,
+				FC0B02E81DEB57DA00F68B69 /* BookListViewController.swift */,
+				FC8A78E61DEBBFDF007C6880 /* BookTableViewCell.swift */,
 			);
 			path = BookShelf;
 			sourceTree = "<group>";
@@ -432,6 +438,8 @@
 				FC0B02E91DEB57DA00F68B69 /* BookListViewController.swift in Sources */,
 				FC8A78D21DEB98F2007C6880 /* BookDetailsViewController.swift in Sources */,
 				FC3B52AA1DE938EF006D49E2 /* AppDelegate.swift in Sources */,
+				FC8A78E71DEBBFDF007C6880 /* BookTableViewCell.swift in Sources */,
+				FC8A78E51DEBB4FC007C6880 /* BookListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

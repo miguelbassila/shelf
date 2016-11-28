@@ -12,31 +12,25 @@ import ShelfCore
 
 class BookListViewController: UIViewController {
 
-  lazy var tableView: UITableView = {
-    let tableView = UITableView()
-    tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
-    tableView.dataSource = self
-    tableView.delegate = self
-    return tableView
-  }()
-
   var books: [Book]? {
     didSet {
-      tableView.reloadData()
+      typedView.tableView.reloadData()
     }
+  }
+
+  var typedView: BookListView {
+    return view as! BookListView
+  }
+
+  override func loadView() {
+    self.view = BookListView()
   }
 
   override func viewDidLoad() {
     super.viewDidLoad()
-
-    view.addSubview(tableView)
-
-    tableView.translatesAutoresizingMaskIntoConstraints = false
-    tableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-    tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-    tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-    tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-    tableView.backgroundColor = UIColor.white
+    typedView.tableView.register(BookTableViewCell.self, forCellReuseIdentifier: "\(BookTableViewCell.self)")
+    typedView.tableView.dataSource = self
+    typedView.tableView.delegate = self
 
     navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addBook))
   }
@@ -54,6 +48,7 @@ class BookListViewController: UIViewController {
   func addBook() {
     let alertController = UIAlertController(title: "New Book", message: nil, preferredStyle: .alert)
 
+    let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
     let saveAction = UIAlertAction(title: "Confirm", style: .default) { action in
       guard
         let nameText = alertController.textFields?.first?.text,
@@ -63,9 +58,8 @@ class BookListViewController: UIViewController {
 
       mainStore.dispatch(BookListAction.add(Book(name: nameText, author: authorText)))
     }
-    alertController.addAction(saveAction)
 
-    let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+    alertController.addAction(saveAction)
     alertController.addAction(cancelAction)
 
     alertController.addTextField {
@@ -86,7 +80,7 @@ extension BookListViewController: UITableViewDataSource {
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+    let cell = tableView.dequeueReusableCell(withIdentifier: "\(BookTableViewCell.self)", for: indexPath)
     cell.textLabel?.text = books?[indexPath.row].name
     return cell
   }
